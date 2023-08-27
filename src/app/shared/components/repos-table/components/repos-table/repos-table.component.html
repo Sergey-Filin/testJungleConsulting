@@ -1,0 +1,64 @@
+<div class="table">
+    <div class="table-row responsive">
+        <div class="table-row__head">
+            <p class="table-row__head-content">Name</p>
+            <p class="table-row__head-content">Description</p>
+        </div>
+        <ng-container *ngIf="tableData?.length">
+            <ng-container *ngFor="let item of tableData">
+                <div class="table-row">
+                    <div class="table-row__body" (click)="openRepos(item)">
+                       <p class="table-row__body-content">
+                           {{item?.name}}
+                       </p>
+                       <div class="table-row__body-content">
+                           {{item?.description || 'EMPTY'}}
+                       </div>
+                    </div>
+                </div>
+            </ng-container>
+        </ng-container>
+        <!--  </div>-->
+        <!--      <div class="table-row" (click)="toggleRow(i)">-->
+        <!--        <div class="table-row__body">-->
+        <!--          <p class="table-row__body-content">-->
+        <!--            {{ item?.name }}-->
+        <!--          </p>-->
+        <!--          <p class="table-row__body-content">-->
+        <!--            {{ item?.role }}-->
+        <!--          </p>-->
+        <!--          <p class="table-row__body-content">-->
+        <!--            ${{ item?.total }}-->
+        <!--            <span *ngIf="item?.details?.length" [class.active]="selectedIndex === i" class="table-row__arrow">-->
+        <!--                  <app-bump-icon name="arrowDown"></app-bump-icon>-->
+        <!--                </span>-->
+        <!--          </p>-->
+        <!--        </div>-->
+        <!--      </div>-->
+        <!--        <div class="table-row__details" [class.active]="selectedIndex === i">-->
+        <!--          <div class="table-row__details-head-main">-->
+        <!--            <p class="table-row__details-head-content">User Details</p>-->
+        <!--            <p class="table-row__details-head-content">Role</p>-->
+        <!--            <p class="table-row__details-head-content">Account</p>-->
+        <!--          </div>-->
+        <!--          <div class="table-row__details-head">-->
+        <!--            <p class="table-row__details-head-title">Name</p>-->
+        <!--            <p class="table-row__details-head-title">User Role</p>-->
+        <!--            <p class="table-row__details-head-title">Account Type</p>-->
+        <!--          </div>-->
+        <!--            <div class="table-row__details-body">-->
+        <!--              <p>-->
+        <!--                {{ detail?.name }}-->
+        <!--              </p>-->
+        <!--              <p>-->
+        <!--                {{ detail?.role }}-->
+        <!--              </p>-->
+        <!--              <p class="remove-item">-->
+        <!--                {{ detail?.type }}-->
+        <!--                <span class="mobile-head">-->
+        <!--                      <button class="btn-purple">Remove</button>-->
+        <!--                    </span>-->
+        <!--              </p>-->
+        <!--            </div>-->
+        <!--        </div>-->
+</div>

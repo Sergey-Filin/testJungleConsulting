@@ -1,0 +1,26 @@
+<div class="table">
+  <div class="table-row responsive">
+    <div class="table-row__head">
+      <p class="table-row__head-content">Name</p>
+      <p class="table-row__head-content">Avatar</p>
+    </div>
+    <ng-container *ngIf="tableData?.length">
+      <ng-container *ngFor="let item of tableData">
+        <div class="table-row">
+          <a class="table-row__body" [routerLink]="['repos/'+ item?.login]">
+            <p class="table-row__body-content">
+              {{item?.login}}
+            </p>
+            <div class="table-row__body-content image">
+                <img
+                  alt="User Image"
+                  [ngSrc]="item?.avatar_url"
+                  priority
+                  fill
+                />
+              </div>
+          </a>
+        </div>
+      </ng-container>
+    </ng-container>
+</div>

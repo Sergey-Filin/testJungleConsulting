@@ -1,0 +1,23 @@
+<div class="repos-details">
+
+    <div class="repos-details-title">{{modalData?.name}}</div>
+
+    <div class="repos-details-content">
+
+        <div class="repos-details-content-description">Description:{{modalData?.description}}</div>
+        <div class="repos-details-content-language">Language:{{modalData?.language}}</div>
+
+        <div>has_issues:
+            <ng-container *ngIf="modalData?.has_issues; else hasNotIssues">
+                <app-icon name="cross"></app-icon>
+            </ng-container>
+        </div>
+        <a [href]="modalData?.html_url" target="_blank">{{modalData?.html_url}}</a>
+
+    </div>
+
+</div>
+
+<ng-template #hasNotIssues>
+    <app-icon name="arrow"></app-icon>
+</ng-template>

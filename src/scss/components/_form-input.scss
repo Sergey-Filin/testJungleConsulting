@@ -1,0 +1,74 @@
+@use '../base/color' as *;
+
+.required::after {
+  color: red;
+  content: '*';
+}
+
+.form-field {
+  display: block;
+  margin-bottom: 2.2rem;
+  position: relative;
+  margin-top: 2.2rem;
+
+  &__wrap {
+    display: flex;
+    align-items: center;
+  }
+
+  &__text {
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    color: black;
+    position: relative;
+  }
+
+  &__description {
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    color: rgba(0, 0, 0, 0.35);
+    margin-left: 0.5rem;
+  }
+
+  &__input {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    color: black;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 1rem 1.6rem;
+    border-radius: 0.4rem;
+    border: 0.1rem solid $light-grey;
+    outline: none;
+
+    &::placeholder {
+      font-size: 1.2rem;
+      line-height: 1.6rem;
+      color: $light-dark-035;
+    }
+
+    &:focus {
+      border-color: $blue;
+    }
+
+    &.error {
+      border: 0.1rem solid $red;
+
+      &:focus &:focus-visible {
+        border: 0.1rem solid $red;
+      }
+    }
+  }
+
+  &__error {
+    position: absolute;
+    box-sizing: border-box;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1rem;
+    color: $red;
+    top: -15px;
+  }
+}

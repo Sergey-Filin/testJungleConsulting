@@ -1,0 +1,14 @@
+<div class="repos">
+
+    <ng-container *ngIf="userRepos$ | async as data">
+
+        <app-repos-table
+            [tableData]="data"
+            (repos)="openRepos($event)"
+        >
+
+        </app-repos-table>
+
+    </ng-container>
+
+</div>

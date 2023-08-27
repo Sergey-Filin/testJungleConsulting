@@ -1,1 +1,1 @@
-export * from './icons/icons.module';
+export * from './icons.module';

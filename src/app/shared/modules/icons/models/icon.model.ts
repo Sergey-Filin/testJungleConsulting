@@ -5,8 +5,7 @@ export interface IconI {
 
 export type Icon =
   'arrowDown' |
-  'arrowDefault' |
-  'arrowBack' |
+  'cross' |
   'arrow';
 
 export type IconColor =

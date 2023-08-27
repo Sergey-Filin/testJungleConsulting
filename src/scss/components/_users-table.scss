@@ -1,0 +1,45 @@
+.table {
+  width: 100%;
+  margin: 0 auto;
+
+  &-row {
+    border-bottom: 1px solid grey;
+    padding: 0.8rem 0;
+
+    &__head {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 2.5rem;
+
+      &-content {
+        font-weight: bold;
+        font-size: 1.6rem;
+        color: black;
+      }
+    }
+
+      &__body {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 2.5rem;
+        cursor: pointer;
+        padding-top: 2rem;
+
+        &-content {
+          font-weight: normal;
+          font-size: 1.6rem;
+          line-height: 2.4rem;
+          color: black;
+          display: flex;
+          align-items: center;
+          width: 100%;
+
+          &.image {
+            position: relative;
+            width: 10rem;
+            height: 10rem;
+          }
+        }
+      }
+    }
+  }

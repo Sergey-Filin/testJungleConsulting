@@ -1,0 +1,11 @@
+<div class="home">
+
+  <app-form-input [formControl]=searchControl></app-form-input>
+
+  <ng-container *ngIf="usersDataList$ | async as data">
+
+    <app-users-table [tableData]="data"></app-users-table>
+
+  </ng-container>
+
+</div>
